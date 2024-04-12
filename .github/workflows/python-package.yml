@@ -28,5 +28,9 @@ jobs:
         git commit -am "auto update README.md"
     - name: Push changes
       run: |
-        git push --set-upstream https://${{ secrets.GH_TOKEN }}@github.com/viabe/Algorithm.git main
+        git config --global user.email "skqldhkd123@naver.com"
+        git config --global user.name "viabe"
+        git remote set-url origin https://x-access-token:${{ secrets.GH_TOKEN }}@github.com/viabe/Algorithm.git
+        git push origin main
+
 
